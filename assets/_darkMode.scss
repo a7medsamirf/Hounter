@@ -1,0 +1,69 @@
+/*--------------------------------------------------
+  [ Theme color   ]
+--------------------------------------------------*/
+/*========== theme Dark ==========*/
+.theme--dark.v-application {
+  background-color: $dark-body ;
+  color: $palette-text-white;
+  .v-navigation-drawer,
+  .v-toolbar.v-app-bar,
+  .v-card
+ {
+    background-color: $dark-body;
+  }
+  header.v-toolbar a.v-btn--active,
+  .text-color-default {
+    color: #fff !important;
+  }  
+
+/*   h1,
+  h2{
+    background: linear-gradient(to right,#cc00ff,#7000ff);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
+    filter: drop-shadow(0 38px 55px rgba(204,0,255,1.15));
+}
+ */
+/* h2 span.custom-text-color{
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  background: -moz-linear-gradient(90deg,#cc00ff,#7000ff);
+  background: -webkit-linear-gradient(90deg,#cc00ff,#7000ff);
+  background: linear-gradient(to right,#cc00ff,#7000ff);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #160f1a;
+  filter: drop-shadow(0 5px 20px rgba(204,0,255,.15));
+} */
+}
+
+/*========== theme light ==========*/
+.theme--light.v-application{
+  .v-card{
+    box-shadow: 0px 14px 22px -9px rgb(187 203 216 / 47%) !important;
+    border: none;
+  }
+}
+
+
+.v-menu__content{
+  border-radius: 1rem;
+  background: #ffffff !important;
+  box-shadow: 0px 0px 25px 0px rgb(45 69 95 / 10%) !important;
+}
+
+
+.section-bg{
+  @include palette-background-section;
+}
+
+.theme--dark.v-btn.v-btn--has-bg {
+  background-color: #3a37eb !important;
+  border-color: #3a37eb;
+}

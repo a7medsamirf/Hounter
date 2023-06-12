@@ -1,0 +1,250 @@
+/* Margin left and right */
+@mixin margin-left($val) {
+  @include rtl-sass-margin-left($val);
+}
+
+@mixin margin-right($val) {
+  @include rtl-sass-margin-right($val);
+}
+
+/* Padding left and right */
+@mixin padding-left($val) {
+  @include rtl-sass-padding-left($val);
+}
+
+@mixin padding-right($val) {
+  @include rtl-sass-padding-right($val);
+}
+
+/* Position left and right */
+
+@mixin left($val) {
+  @include rtl-sass-left($val);
+}
+
+@mixin right($val) {
+  @include rtl-sass-right($val);
+}
+
+/* Float */
+
+@mixin float($val) {
+  @include rtl-sass-float($val);
+}
+
+/* Text align */
+
+@mixin text-align($val) {
+  @include rtl-sass-text-align($val);
+}
+
+
+/* Translate */
+
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+
+/* Border */
+@mixin border-left($val) {
+  @include rtl-sass-border-left($val);
+}
+
+@mixin border-right($val) {
+  @include rtl-sass-border-right($val);
+}
+
+/* Text color palette */
+@mixin palette-text-primary {
+  .theme--light & {
+    color: $light-text-primary
+  }
+  .theme--dark & {
+    color: $dark-text-primary
+  }
+}
+
+@mixin palette-text-secondary {
+  .theme--light & {
+    color: $light-text-secondary
+  }
+  .theme--dark & {
+    color: $dark-text-secondary
+  }
+}
+
+/// title text color
+@mixin title-text-color {
+  .theme--light & {
+    color: $dark-surface
+  }
+  .theme--dark & {
+    color: $dark-text-primary
+  }
+}
+
+/// title text color bg dark
+@mixin white-text-color-bg-dark {
+  .theme--light & {
+    color: $white-text-color
+  }
+  .theme--dark & {
+    color: $white-text-color
+  }
+}
+
+/// description text color
+@mixin description-text-color {
+  .theme--light & {
+    color: $light-description-text
+  }
+  .theme--dark & {
+    color: $dark-description-text
+  }
+}
+
+@mixin palette-text-disabled {
+  .theme--light & {
+    color: $light-text-disabled
+  }
+  .theme--dark & {
+    color: $dark-text-disabled
+  }
+}
+
+
+/* Divider color palette */
+@mixin palette-divider {
+  .theme--light & {
+    border-color: $light-divider
+  }
+  .theme--dark & {
+    border-color: $dark-divider
+  }
+}
+
+/* Background color palette */
+@mixin palette-background-section {
+  .theme--light & {
+    background-color: $light-background-section
+  }
+  .theme--dark & {
+    background-color: $dark-background-section
+  }
+}
+
+@mixin palette-background-default {
+  .theme--light & {
+    background-color: $light-background-default
+  }
+  .theme--dark & {
+    background-color: $dark-background-default
+  }
+}
+
+@mixin palette-background-text-primary {
+  .theme--light & {
+    background-color: $light-text-primary
+  }
+  .theme--dark & {
+    background-color: $dark-text-secondary
+  }
+}
+
+@mixin color{
+  .theme--light & {
+    color: #000
+  }
+  .theme--dark & {
+    color: #fff
+  }
+}
+
+@mixin bg-color-fade($color, $opacity) {
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color;
+    opacity: $opacity;
+  }
+}
+
+@mixin bg-color-lighten($color, $opacity) {
+  background: $color;
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $palette-common-white;
+    opacity: $opacity;
+  }
+}
+
+@mixin bg-color-darken($color, $opacity) {
+  background: $color;
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $palette-common-black;
+    opacity: $opacity;
+  }
+}
+
+@mixin fill-color-fade($color, $opacity) {
+  fill: $color;
+  opacity: $opacity;
+}
+
+/*
+** Custom property dark and ligth mode
+*/
+@mixin use-theme($property, $light, $dark) {
+  .theme--light & {
+    #{$property}: $light
+  }
+  .theme--dark & {
+    #{$property}: $dark
+  }
+}
+
+@mixin use-rtl($property, $value) {
+  .v-application--is-rtl & {
+    #{$property}: $value
+  }
+}
+
+@mixin rtl-flip {
+  .v-application--is-rtl & {
+    transform: scaleX(-1)
+  }
+}
+
+
+/* Custom shadows */
+@mixin shadow {
+  .theme--dark & {
+    box-shadow: 0px 1px 3px 0px rgba(64, 64, 64, 1), 0px 1px 1px 0px rgba(42, 42, 42, 1), 0px 2px 1px -1px rgba(20, 20, 20, 1)
+  }
+  .theme--light & {
+    box-shadow: 0 1.5px 12px 2px rgba(0, 0, 0, 0.06);
+  }
+}
+
+@mixin shadow1 {
+  box-shadow: none
+}

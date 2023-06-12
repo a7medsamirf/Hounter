@@ -1,0 +1,113 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+
+/*$material-light: ( 'background': #faf7f2 );
+$material-dark: ( 'background': #001e26 );*/
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'node_modules/rtl-sass/src/_rtl.scss';
+/*@import '~vuetify/src/styles/styles.sass';*/
+// $font-size-root: 20px;
+
+// font-family
+$body-font-family: 'Tajawal', sans-serif !important;
+$en-body-font-family: 'Nunito', sans-serif !important;
+
+// font-size
+$h1-font-size: 2.5rem !important;
+$h2-font-size: 2rem !important;
+$h3-font-size: 1.75rem !important;
+$h4-font-size: 1.5rem !important;
+$h5-font-size: 1.25rem !important;
+$h6-font-size: 1rem ;
+$paragraph : 0.875rem !important;
+
+// Font weight
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-SemiBold: 600;
+$font-bold: 700;
+$font-bolder: 800;
+
+//text-color
+$dark-text-color: #0B0D39;
+$white-text-color: #fff;
+$p-light-text: 300;
+
+
+//box shadow
+/*$box-shadow: 0 7px 18px 0 rgb(7 174 175 / 32%) !important;*/
+$box-shadow:  0 6px 20px 4px rgb(56 125 255 / 28%) !important;
+
+//transition
+/* $transition: all 0.5s ease-in-out; */
+// Link
+$palette-link: var(--v-anchor-base);
+
+// card bg
+$card-bg:rgba(255, 255, 255, 0.05882);
+
+
+
+// Common color palette
+$palette-common-white: #FFF !important;
+$palette-text-white: #FFF;
+$palette-common-black: #000;
+$palette-common-primary: #e62d2d;
+$palette-common-secondary: #FE9900;
+
+$dark-description-text :rgba(255, 255, 255, 0.7);
+$light-description-text : #343474a3 !important;
+
+// Dark Color Palette
+$dark-surface: #2B2D5B !important; // card and item
+$dark-body: #0B0D39 !important;
+$dark-section-bg: #1A1C46 !important;
+
+
+$dark-text-primary: var(--white-color);
+$dark-text-secondary: rgba(255, 255, 255, 0.7);
+$dark-text-disabled: rgba(255, 255, 255, 0.5);
+$dark-text-hint: rgba(255, 255, 255, 0.5);
+$dark-divider: rgba(255, 255, 255, 0.12);
+
+$dark-background-default: #1b344d;
+
+
+// Theme color
+
+$light-background-section: var(--white-section);
+$dark-background-section: var(--dark-section);
+
+
+// dark shadow
+$dark-shadow: 0px 1px 10px 1px #404040, 0px 1px 1px 1px #2a2a2a, 0px 2px 8px -1px #141414;
+
+// Base unit
+$unit: 8px;
+// Spacing unit
+$py-20: 6.25rem;
+
+$spacing1: 1 * $unit; //8
+$spacing2: 2 * $unit; //16
+$spacing3: 3 * $unit; // 24
+$spacing4: 4 * $unit; // 32
+$spacing5: 5 * $unit; // 40
+$spacing6: 6 * $unit; // 48
+$spacing7: 7 * $unit; // 56
+$spacing8: 8 * $unit; // 64
+$spacing9: 9 * $unit; // 72
+$spacing10: 10 * $unit; // 80
+$spacing11: 11 * $unit; // 88
+$spacing12: 12 * $unit; // 96
+$spacing13: 13 * $unit; // 104
+$spacing14: 14 * $unit; // 112
+$spacing15: 15 * $unit; // 120
+$spacing16: 16 * $unit; // 128
+$spacing17: 17 * $unit; // 136
+$spacing18: 18 * $unit; // 144
+$spacing19: 19 * $unit; // 152
+$spacing20: 20 * $unit; // 160
+

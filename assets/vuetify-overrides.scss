@@ -1,0 +1,479 @@
+/*
+Template Name: Microfilm
+Description: Microfilm | Vue Template
+Version: 1.0
+Author: Ahmed Samir
+        linkedin    URI: https://www.linkedin.com/in/a7med-samir-f/
+        Github      URI: https://github.com/a7medsamirf
+        Facebook    URI: https://www.facebook.com/a7med.samir.93/
+        Twitter     URI: https://twitter.com/a7medsamirf
+Tags: vue, Nuxt, Vuetify, Content, APi, one page, responsive, Axios
+Main Css Rules  for Main Elements in The project
+/*
+Style Index
+==================================================
+    1. Basic Setup
+    2. Theme color
+    3. Navigation Drawer
+    4. Hero Section
+    5. Projects Section
+*/
+/*--------------------------------------------------
+  [1. Start Basic Setup ]
+--------------------------------------------------*/
+:root {
+  --maincolor: #3a37eb;
+  --p-darkcolor: #a9a9a9;
+  --white-color: #fff;
+  --dark-body: #0B0D39;
+  --white-section: #F2FBFC;
+  --dark-section: #1A1C46;
+  --dark-card: #1A1C46;
+  --white-card: #1A1C46;
+  --custom-text-color: #F68338
+}
+
+.theme--dark.v-application .section-bg-img {
+  background-image: url(#{$BodyBgPath}/header-bg.webp) !important;
+  background-size: contain !important;
+  background-repeat: repeat !important;
+}
+
+.v-application--is-ltr {
+  font-family: $en-body-font-family;
+}
+
+.v-application--is-rtl {
+  font-family: $body-font-family;
+}
+
+body {
+  text-transform: capitalize;
+  letter-spacing: normal;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+p {
+  color: #ceced7;
+  font-size: 1rem;
+  line-height: 25px;
+  font-weight: $font-regular;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.v-chip--label {
+  border-radius: 0 !important;
+}
+
+.py-20 {
+  padding-top: 6.25rem !important;
+  padding-bottom: 6.25rem !important;
+}
+
+.pt-20 {
+  padding-top: 6.25rem !important;
+  ;
+
+  @include breakpoints-down(md) {
+    padding-top: 5rem !important;
+    ;
+  }
+
+  @include breakpoints-down(xs) {
+    padding-top: 4rem !important;
+    ;
+  }
+}
+
+.pa-20 {
+  padding: 4rem !important;
+  ;
+
+  @include breakpoints-down(md) {
+    padding: 3rem !important;
+    ;
+  }
+
+  @include breakpoints-down(xs) {
+    padding: 2rem !important;
+    ;
+  }
+}
+
+.py-20 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+
+  @include breakpoints-down(md) {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+
+  }
+
+  @include breakpoints-down(xs) {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    ;
+  }
+}
+
+.colorful-title {
+  background-image: linear-gradient(101.97deg, #55B1F8 20.61%, #6C14F2 46.13%, #9E14F2 73.88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-text-color {
+  color: var(--custom-text-color);
+  ;
+}
+
+/*--------------------------------------------------
+  [2. Theme color   ]
+--------------------------------------------------*/
+
+.v-toolbar.v-app-bar.v-app-bar--fixed {
+  background: #ffffff !important;
+  box-shadow: 0px 0px 25px 0px rgb(45 69 95 / 10%) !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.v-toolbar.v-app-bar.v-app-bar--fixed.v-app-bar--is-scrolled {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* Arrows */
+/* .slick-prev {
+  @include right(140px);
+
+  @include breakpoints-down(md) {
+    top: -150px !important;
+    @include right(85px);
+  }
+}
+
+.slick-next {
+  @include right(80px);
+
+  @include breakpoints-down(md) {
+    top: -150px !important;
+    @include right(45px);
+  }
+}
+ */
+@include breakpoints-down(md) {
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 12px !important;
+  }
+}
+
+/*--------------------------------------------------
+  [3. Navigation Drawer  ]
+--------------------------------------------------*/
+
+.v-toolbar .v-btn:before {
+  background-color: transparent;
+  border-radius: 3px;
+  bottom: unset;
+  color: inherit;
+  content: "";
+  left: 0px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+header.v-toolbar a.v-btn--active {
+  color: #0B0D39 !important;
+}
+
+header.v-toolbar a.v-btn--active:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3063e9;
+  position: absolute;
+  bottom: 15px;
+}
+
+.logo {
+  .v-image {
+    @include breakpoints-down(md) {
+      max-width: 135px !important;
+    }
+  }
+}
+
+
+
+/*---------- Sidebar ----------*/
+
+.v-navigation-drawer {
+  .v-list .v-list-item--active i.v-icon.notranslate.mdi.mdi-record-circle-outline {
+    color: #fff;
+  }
+}
+
+.v-toolbar_content,
+.v-toolbar_extension {
+  padding: 0;
+}
+
+header.v-sheet.theme--light.v-toolbar.v-app-bar.v-app-bar--fixed {
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+header.v-sheet.theme--light.v-toolbar.v-app-bar.v-app-bar--fixed.v-app-bar--is-scrolled {
+  box-shadow: 0 3px 3px -1px rgb(10 22 70 / 10%), 0 0 1px 0 rgb(10 22 70 / 6%) !important;
+  background-color: rgb(255 255 255 / 65%);
+  backdrop-filter: blur(8px);
+}
+
+.sub-list-group {
+  background-color: #f4f5fa;
+}
+
+
+i.v-icon.notranslate.mdi.mdi-record-circle-outline {
+  font-size: 15px;
+  color: var(--maincolor);
+}
+
+.theme--light.v-app-bar.v-toolbar.v-sheet {
+  background-color: #f5f5f5;
+}
+
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+  background-color: #272727;
+}
+
+.v-sheet.v-app-bar.v-toolbar {
+  border-radius: 0;
+}
+
+.v-toolbar__content,
+.v-toolbar__extension {
+  padding: 0px 16px !important;
+}
+
+.v-toolbar .DesktopNav .v-btn--active:hover::before,
+.v-toolbar .DesktopNav .v-btn--active::before {
+  opacity: 1 !important;
+}
+
+.v-toolbar .DesktopNav .v-btn:before {
+  background-color: transparent;
+  border-radius: 3px;
+  bottom: unset;
+  color: inherit;
+  content: "";
+  left: 0px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+  /*   border-bottom: 3px solid;
+ */
+}
+
+header .v-btn:not(.v-btn--round).v-size--default {
+  height: 36px;
+  min-width: 64px !important;
+  padding: 0;
+  margin: 0px 10px;
+}
+
+.v-navigation-drawer {
+  transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.close-icon:hover .v-icon {
+  transition: 0.70s;
+  transform: rotate(180deg);
+}
+
+.v-menu__content {
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%) !important;
+}
+
+.v-app-bar .v-list {
+  background: #001e26 !important;
+  color: #FFFFFF;
+}
+
+.page-menu {
+  margin-top: 50px;
+  contain: initial;
+  overflow: visible;
+}
+
+.page-menu::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 58px;
+  transform: translateY(-100%);
+  width: 10px;
+  height: 13px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 13px solid #fff;
+}
+
+.theme--dark .page-menu::before {
+  border-bottom: 13px solid #012a35;
+}
+
+/*--------------------------------------------------
+  [4. Hero Section  ]
+--------------------------------------------------*/
+
+
+/*--------------------------------------------------
+  [5. Projects Section ]
+--------------------------------------------------*/
+
+.Project-title {
+  transform-style: preserve-3d;
+  z-index: 1;
+  padding: 26px 30px;
+  transform: perspective(1200px) rotateX(-90deg) translateZ(-51px);
+  /*   @include text-align(right); */
+  position: relative;
+  letter-spacing: 4px;
+  @include padding-left(35px);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    @include left(10px);
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+
+  &:hover {
+    @include padding-left(60px);
+
+    &:before {
+      width: 35px;
+    }
+  }
+}
+
+[dir=rtl] .Project-title {
+  text-align: right;
+}
+
+[dir=ltr] .Project-title {
+  text-align: left;
+}
+
+
+#Projects {
+  position: relative;
+  background-color: #090b33;
+
+  .slick-slide.slick-current.slick-active .box-media {
+    transition-delay: 0.3s;
+    @include right(0px);
+  }
+
+  .Projects-title {
+    position: absolute;
+    left: 100px;
+    width: 50%;
+    z-index: 1;
+    top: 50%;
+
+    .Projects-title-item {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+
+
+  .Project-block {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+    .box-media {
+      position: absolute;
+      top: 0;
+      right: -70px;
+      width: 70px;
+      height: 70px;
+      line-height: 60px;
+      color: #fff;
+      background: #35353A;
+      z-index: 5;
+      -webkit-transition: all 400ms linear;
+      transition: all 400ms linear;
+    }
+  }
+}
+
+
+#Projects .slick-slide.slick-current.slick-active.slick-center .Project-title {
+  -webkit-transform: perspective(1200px) rotateX(0deg) translateZ(0px);
+  -moz-transform: perspective(1200px) rotateX(0deg) translateZ(0px);
+  transform: perspective(1200px) rotateX(0deg) translateZ(0px);
+  transition-delay: 0.3s;
+  -webkit-transition: all 400ms linear;
+  transition: all 400ms linear;
+}
+
+#Projects .slick-slide {
+  opacity: 0.3;
+  transform: scale(0.9);
+  padding: 0 10px;
+  -webkit-transition: all 400ms linear;
+  transition: all 400ms linear;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+#Projects .slick-slide.slick-current.slick-active {
+  opacity: 1;
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  transform: scale(1.0);
+}

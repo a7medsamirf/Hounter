@@ -1,0 +1,33 @@
+{
+  "name": "Hounter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.0.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "prism-themes": "1.5.0",
+    "rtl-sass": "^1.5.0",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10",
+    "vuetify": "^2.6.10"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.12.3",
+    "sass": "^1.53.0",
+    "sass-loader": "^10.3.1"
+  }
+}

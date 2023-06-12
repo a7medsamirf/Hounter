@@ -1,0 +1,184 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: $dark-surface;
+}
+
+::-moz-selection,
+-webkit-::-moz-selection {
+  background-color: $dark-surface;
+  color: $palette-text-white !important;
+}
+
+::selection,
+-webkit-::selection,
+::-moz-selection {
+  background-color: $dark-surface;
+  color: $palette-text-white !important;
+}
+
+
+/*========== theme Text ==========*/
+.use-text {
+  &-title {
+    font-size: $h1-font-size;
+    font-weight: $font-bolder;
+    @include breakpoints-down(md) {
+      font-size: $h2-font-size;
+      line-height: $spacing7;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h3-font-size;
+      line-height: $spacing5
+    }
+  }
+
+  &-title2 {
+    font-size: $h2-font-size;
+
+    @include breakpoints-down(md) {
+      font-size: $h3-font-size;
+      line-height: $spacing7;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h4-font-size;
+      line-height: $spacing5
+    }
+  }
+
+  &-title3 {
+    font-size: $h3-font-size;
+    font-weight: $font-SemiBold;
+
+    @include breakpoints-down(md) {
+      font-size: $h4-font-size;
+      line-height: $spacing7;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h5-font-size;
+      line-height: $spacing5
+    }
+  }
+
+  &-title4 {
+    font-size: $h4-font-size;
+    font-weight: $font-bold;
+
+    @include breakpoints-down(md) {
+      font-size: $h4-font-size;
+      line-height: $spacing7;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h5-font-size;
+      line-height: $spacing5
+    }
+  }
+
+  &-title5 {
+    font-size: $h5-font-size;
+    font-weight: $font-bold;
+
+    @include breakpoints-down(md) {
+      font-size: $h5-font-size;
+      line-height: $spacing7;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $h6-font-size;
+      line-height: 45px;
+    }
+  }
+
+  &-subtitle {
+    font-size: $h6-font-size;
+    font-weight: $font-medium;
+     @include description-text-color;
+    @include breakpoints-down(md) {
+      font-size: $paragraph;
+      line-height: 36px;
+    }
+
+    @include breakpoints-down(xs) {
+      font-size: $paragraph;
+      line-height: 28px;
+    }
+  }
+
+  &-paragraph {
+    font-weight: $font-medium;
+    font-size: $paragraph;
+    line-height: 27px !important;
+    white-space: break-spaces !important;
+    @include description-text-color;
+  }
+}
+
+.v-btn {
+  text-transform: capitalize;
+  letter-spacing: normal !important;
+  text-indent: 0 !important;
+}
+
+.btn {
+  background: var(--maincolor);
+  padding: 1em 1.5em;
+  color: #fff;
+  border-radius: 5px;
+  margin-block: 1em;
+  text-indent: 0 !important; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1rem;
+  transition: 0.2s ease;
+  min-width: 115px;
+  height: 3em;
+  box-shadow: 3px 3px 0px var(--maincolor);
+
+  &:hover {
+    transform: scale(0.95);
+    box-shadow: 1px 1px 0px var(--maincolor);
+  }
+}
+
+.btn.outline {
+  background-color: transparent;
+  outline: 1px solid var(--maincolor);
+  outline-offset: -1px;
+  color: var(--maincolor);
+}
+
+.btn.default {
+  box-shadow: $box-shadow
+}
+
+.title-btn {
+  background-color: rgb(255 145 0 / 20%) !important;
+  color: #ff9100;
+  height: 36px;
+  min-width: 77px;
+  padding: 0 26px;
+  text-transform: capitalize;
+  font-size: 17px;
+  @include breakpoints-down(md) {
+    font-size: 15px !important;
+    padding: 0 10px !important;
+  }
+}
+
+.text-color-default {
+  @include title-text-color;
+}
+
+.white-text-bg-dark{
+  @include white-text-color-bg-dark;
+}
